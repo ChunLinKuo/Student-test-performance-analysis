@@ -21,9 +21,9 @@ Students_test_performance - it contains detailed information about test score.
 - Does male and female have strength on different subjects?
 
 ### Data Analysis
-- SQL - Data cleaning and analysis [View here](https://github.com/ChunLinKuo/Student-test-performance-analysis/blob/main/Students%20test%20performance.sql)
-- Tableau - Creating report [View here](https://public.tableau.com/app/profile/chun.lin.kuo/viz/Testscoreproject/Dashboard1#2)
-- Excel - Creaing Dashboard [View here](https://github.com/ChunLinKuo/Student-test-performance-analysis/blob/main/StudentsPerformance%20_Excel%20Project.xlsx)
+- SQL - [View here](https://github.com/ChunLinKuo/Student-test-performance-analysis/blob/main/Students%20test%20performance.sql)
+- Tableau - [View here](https://public.tableau.com/app/profile/chun.lin.kuo/viz/Testscoreproject/Dashboard1#2)
+- Excel - [View here](https://github.com/ChunLinKuo/Student-test-performance-analysis/blob/main/StudentsPerformance%20_Excel%20Project.xlsx)
 ### Results
 - Parents' education level does affect students' test scores. According to the analysis, completing a test preparation course has a significant benefit on test scores. Students receiving lunch aid can also benefit from completing a preparation course.
 - Males have higher scores in math, while females have higher scores in reading and writing. Females have a higher overall average score
