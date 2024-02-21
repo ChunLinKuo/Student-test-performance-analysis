@@ -44,7 +44,7 @@ SELECT *,
 	   AVG(writing_score) OVER (Partition by gender) AS avg_writing_score
 FROM [ PorfolioProject].[dbo].[StudentsPerformance_V2]
 
---Giving Feedback by comparing the math score by gender
+--Giving Feedback by comparing score by gender
 WITH AVG_MATH_CTE AS (
 SELECT *,
        AVG(math_score) OVER (Partition by gender) AS avg_math_score,
