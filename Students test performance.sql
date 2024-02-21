@@ -12,13 +12,13 @@ OR reading_score IS NULL
 WITH Duplicate_CTE AS (
 SELECT*, ROW_NUMBER () OVER (Partition by lunch,
                                           test_preparation_course,
-										  parental_level_of_education,
-										  gender,
-										  race_ethnicity,
-										  math_score,
-										  reading_score,
-										  writing_score 
-										  ORDER BY race_ethnicity DESC) AS Row_num
+					  parental_level_of_education,
+	                                  gender,
+					  race_ethnicity,
+					  math_score,
+					  reading_score,
+					  writing_score 
+ORDER BY race_ethnicity DESC) AS Row_num
 FROM [ PorfolioProject].[dbo].[StudentsPerformance_V2]
 )
 
