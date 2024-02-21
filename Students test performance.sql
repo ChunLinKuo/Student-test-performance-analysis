@@ -31,12 +31,18 @@ SELECT race_ethnicity, AVG(math_score)
 FROM [ PorfolioProject].[dbo].[StudentsPerformance_V2]
 GROUP BY race_ethnicity
 
---Check overall average math score and differene  
+--Two ways to check overall average math score and differene  
 SELECT *,
        AVG(math_score) OVER () AS overall_avg_math_score,
        math_score - AVG(math_score) OVER () AS DIFF
 FROM [ PorfolioProject].[dbo].[StudentsPerformance_V2]
 
+SELECT *,overall_avg_math_score,math_score - overall_avg_math_score AS DIFF
+FROM (
+    SELECT *,AVG(math_score) OVER () AS overall_avg_math_score 
+    FROM [ PorfolioProject].[dbo].[StudentsPerformance_V2]
+) AS calculated_diff;
+	
 --Average test score by gender
 SELECT *,
        AVG(math_score) OVER (Partition by gender) AS avg_math_score,
