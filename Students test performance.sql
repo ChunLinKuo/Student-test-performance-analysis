@@ -121,13 +121,13 @@ INSERT INTO #feedbackset (
 SELECT *,
     CASE WHEN math_score > avg_math_score THEN 'Exceeding'
          WHEN math_score < avg_math_score THEN 'Working Toward'
-    END AS Avg_math_score_feedback,
-	CASE WHEN reading_score > avg_reading_score THEN 'Exceeding'
+         END AS Avg_math_score_feedback,
+    CASE WHEN reading_score > avg_reading_score THEN 'Exceeding'
          WHEN reading_score < avg_reading_score THEN 'Working Toward'
-    END AS Avg_reading_score_feedback,
-	CASE WHEN writing_score > avg_writing_score THEN 'Exceeding'
+         END AS Avg_reading_score_feedback,
+    CASE WHEN writing_score > avg_writing_score THEN 'Exceeding'
          WHEN writing_score < avg_writing_score THEN 'Working Toward'
-    END AS Avg_writing_score_feedback
+         END AS Avg_writing_score_feedback
 FROM AVG_MATH_CTE;
 
 -- Count how many exceeding and working toward by ethnicity and gender
