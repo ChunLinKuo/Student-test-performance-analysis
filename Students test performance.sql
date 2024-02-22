@@ -61,18 +61,14 @@ FROM [ PorfolioProject].[dbo].[StudentsPerformance_V2]
 SELECT *,
 CASE WHEN math_score > avg_math_score THEN 'Excedding'
      WHEN math_score < avg_math_score THEN 'Working Toward'
-END AS Avg_math_score_feedback,
-	CASE WHEN reading_score > avg_reading_score THEN 'Exceeding'
-         WHEN reading_score < avg_reading_score THEN 'Working Toward'
-    END AS Avg_reading_score_feedback,
-	CASE WHEN writing_score > avg_writing_score THEN 'Exceeding'
-         WHEN writing_score < avg_writing_score THEN 'Working Toward'
-    END AS Avg_writing_score_feedback
+     END AS Avg_math_score_feedback,
+CASE WHEN reading_score > avg_reading_score THEN 'Exceeding'
+     WHEN reading_score < avg_reading_score THEN 'Working Toward'
+     END AS Avg_reading_score_feedback,
+CASE WHEN writing_score > avg_writing_score THEN 'Exceeding'
+     WHEN writing_score < avg_writing_score THEN 'Working Toward'
+     END AS Avg_writing_score_feedback
 FROM AVG_MATH_CTE
-
-SELECT *
-FROM Duplicate_CTE
-WHERE row_num <> 1
 
 -- Drop the temporary table if it exists
 IF OBJECT_ID('tempdb..#feedbackset') IS NOT NULL
