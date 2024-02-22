@@ -130,7 +130,7 @@ SELECT *,
          END AS Avg_writing_score_feedback
 FROM AVG_MATH_CTE;
 
--- Count how many exceeding and working toward by ethnicity and gender
+-- Count how many exceeding and working toward by gender
 SELECT race_ethnicity,Gender,
        COUNT(CASE WHEN avg_math_score_feedback = 'Exceeding' THEN 1 END) AS Math_Exceeding_Count,
        COUNT(CASE WHEN avg_math_score_feedback = 'Working Toward' THEN 1 END) AS Math_Working_Toward_Count,
