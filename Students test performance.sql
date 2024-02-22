@@ -134,9 +134,9 @@ FROM AVG_MATH_CTE;
 SELECT race_ethnicity,Gender,
        COUNT(CASE WHEN avg_math_score_feedback = 'Exceeding' THEN 1 END) AS Math_Exceeding_Count,
        COUNT(CASE WHEN avg_math_score_feedback = 'Working Toward' THEN 1 END) AS Math_Working_Toward_Count,
-	   COUNT(CASE WHEN avg_reading_score_feedback = 'Exceeding' THEN 1 END) AS Reading_Exceeding_Count,
+       COUNT(CASE WHEN avg_reading_score_feedback = 'Exceeding' THEN 1 END) AS Reading_Exceeding_Count,
        COUNT(CASE WHEN avg_reading_score_feedback = 'Working Toward' THEN 1 END) AS Reading_Working_Toward_Count,
-	   COUNT(CASE WHEN avg_writing_score_feedback = 'Exceeding' THEN 1 END) AS Writing_Exceeding_Count,
+       COUNT(CASE WHEN avg_writing_score_feedback = 'Exceeding' THEN 1 END) AS Writing_Exceeding_Count,
        COUNT(CASE WHEN avg_writing_score_feedback = 'Working Toward' THEN 1 END) AS Writing_Working_Toward_Count
 FROM #feedbackset
 GROUP BY race_ethnicity,Gender;
