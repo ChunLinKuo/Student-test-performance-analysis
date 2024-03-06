@@ -1,7 +1,7 @@
 # Students-Test-Performance-Analysis
 
 ### Project Overview
-This data analysis aims to provide insights into differe factors that might influence students' test performance. It involves paretnal education level, test preparation course and lunch aids...etc. By analyzing the data, we have better visibility to identify correlations.
+This data analysis aims to provide insights into different factors that might influence students' test performance. It involves parental education level, test preparation course and lunch aids...etc. By analyzing the data, we have better visibility to identify correlations.
 ### Data Source
 Students_test_performance - it contains detailed information about test score. 
 
